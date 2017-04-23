@@ -124,3 +124,25 @@ footer {
          width:150px; height:110px; padding:8px; 
 			border:1px #888888 solid; margin:8px;
     }
+
+#content {
+    float:left; width:650px; padding:20px;
+}
+
+    #content h1 {
+        margin:0px 0px 20px 0px; font-size:32px;
+		    border-bottom:1px #777777 solid; padding: 20px 0px;
+    }
+
+    #content h2 {
+       margin:20px 0px 0px 0px; 
+    }
+
+    #content img {
+        width:250px; height:200px; padding:8px; 
+			border:1px #888888 solid; margin:8px;
+    }
+
+    #content p {
+        margin:16px 0px; line-height:160%;
+    }

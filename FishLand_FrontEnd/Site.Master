@@ -126,6 +126,13 @@
                <p>Our Chef makes some home-made desserts every now and then.
                    Puddings, triffles, ice-cream and etc.
                </p>
+
+               <h2> Today's Special </h2>
+
+               <img src="images/meal2.png" />
+
+               <p> Buy one Fish wrap, get one free for only R68.99. Drink included.</p>
+
            </div>
 
 
