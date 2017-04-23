@@ -69,11 +69,11 @@
         
            <div id="topnav">
                <ul>
-                   <li><a href="index.aspx">HOME</a></li>
+                   <li><a href="Default.aspx">HOME</a></li>
                    <li><a href="menu.aspx">MENU</a></li>
                    <li><a href="order.aspx">ORDER ONLINE</a></li>
                    <li><a href="About.aspx">ABOUT US</a></li>
-                   <li><a href="contact.aspx">CONTACT US</a></li>
+                   <li><a href="Contact.aspx">CONTACT US</a></li>
                </ul>
            </div>
 
