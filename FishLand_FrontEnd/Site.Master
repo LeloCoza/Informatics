@@ -110,7 +110,25 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
 
             </asp:ContentPlaceHolder>
-           
+           <div id="rightside">
+               <h2>Drinks</h2>
+
+               <img src="images/beverages4.png" />
+
+               <p> Here are some beverages to go with your meals. Soft drinks and juice are available for purchase as well, 
+				    along with your meals.
+               </p>
+
+               <h2> Desserts </h2>
+
+               <img src="images/dessert4.png" />
+
+               <p>Our Chef makes some home-made desserts every now and then.
+                   Puddings, triffles, ice-cream and etc.
+               </p>
+           </div>
+
+
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> FishLand Shop Website</p>
             </footer>

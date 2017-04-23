@@ -98,4 +98,29 @@ footer {
         text-align:center; color:white;
     }
 
+#subbanner {
+    width:100%; background-color:#555555; padding:15px 0px; 
+		overflow:hidden;
+}
 
+    #subbanner h3 {
+        color:#ffffff; font-size:16px; font-weight:bold;
+			text-align:center; line-height:180%;
+    }
+
+#rightside {
+    padding:20px; margin-left:675px;
+}
+
+    #rightside h2 {
+        margin:20px 0px 10px 0px;
+    }
+
+    #rightside p {
+         margin:8px 0px; line-height:160%;
+    }
+
+    #rightside img {
+         width:150px; height:110px; padding:8px; 
+			border:1px #888888 solid; margin:8px;
+    }
