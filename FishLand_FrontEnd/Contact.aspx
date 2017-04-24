@@ -1,17 +1,29 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="FishLand_FrontEnd.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
-    <h3>Your contact page.</h3>
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
+    <div id="content">
+        <h1>Contact Us Today</h1>
+        <p>For any complaints or suggestions on how we can better improve our service; that is: serve you better, please leave 
+		   a message below by filling in our contact form.
+        </p>
+        <br /><br />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <br />
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br /><br />
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+        <br />
+        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <br /><br />
+        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+        <br />
+        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <br /><br />
+        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+        <br />
+        <textarea id="TextArea1" cols="45" rows="5"></textarea>
+        <br /><br />
+        <asp:Button ID="Button1" runat="server" Text="Button" />
 
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
+    </div>
 </asp:Content>
