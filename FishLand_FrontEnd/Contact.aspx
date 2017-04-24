@@ -4,26 +4,27 @@
     <div id="content">
         <h1>Contact Us Today</h1>
         <p>For any complaints or suggestions on how we can better improve our service; that is: serve you better, please leave 
-		   a message below by filling in our contact form.
+		   a message below by filling in our contact form. Do not hesitate!
         </p>
         <br /><br />
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        <br />
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <br /><br />
-        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-        <br />
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        <br /><br />
-        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-        <br />
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <br /><br />
-        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-        <br />
-        <textarea id="TextArea1" cols="45" rows="5"></textarea>
-        <br /><br />
-        <asp:Button ID="Button1" runat="server" Text="Button" />
-
-    </div>
+            <asp:Label ID="lblName" runat="server" Text="Name"></asp:Label>
+            <br />
+            <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+            <br /><br />
+            <asp:Label ID="lblCell" runat="server" Text="Cellphone"></asp:Label>
+            <br />
+            <asp:TextBox ID="txtCell" runat="server"></asp:TextBox>
+            <br /><br />
+            <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
+            <br />
+            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            <br /><br />
+            <asp:Label ID="lblMsg" runat="server" Text="Message"></asp:Label>
+            <br />
+            <textarea id="TextArea1" cols="40" rows="7"></textarea>
+            <br /><br />
+            <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+            <br /><br />
+            <asp:Label ID="lblFeedback" runat="server">Feedback</asp:Label>
+      </div>
 </asp:Content>
