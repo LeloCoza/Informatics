@@ -227,12 +227,12 @@
     <Content Include="images\dish2.png" />
     <Content Include="images\dish4.png" />
     <Content Include="images\dish5.png" />
-    <Content Include="images\dish6.png" />
+    <Content Include="images\1.png" />
     <Content Include="images\dish7.png" />
-    <Content Include="images\dish8.png" />
+    <Content Include="images\2.png" />
     <Content Include="images\facebookIkon.png" />
     <Content Include="images\fishFingers.png" />
-    <Content Include="images\fishFingers2.png" />
+    <Content Include="images\3.png" />
     <Content Include="images\lightbox-blank.png" />
     <Content Include="images\lightbox-btn-close.png" />
     <Content Include="images\lightbox-btn-next.png" />

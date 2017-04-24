@@ -11,13 +11,15 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <script type="text/javascript" src="Scripts/js/jquery.js"></script>     <!-- JQuery Library -->
-    <script type="text/javascript" src="Scripts/js/banner.js"></script>     <!-- JQuery Plugin -->
+    <script type="text/javascript" src="Scripts/js/jquery.js"></script>
+    <!-- JQuery Library -->
+    <script type="text/javascript" src="Scripts/js/banner.js"></script>
+    <!-- JQuery Plugin -->
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
 
         var image1 = new Image()
         image1.src = "images/dish6.png"
@@ -27,7 +29,7 @@
 
         var image3 = new Image()
         image3.src = "images/fishFingers2.png"
-    </script>
+    </script>-->
 
     <link href="Content/master.css" rel="stylesheet" type="text/css" media="screen" />
 
@@ -37,47 +39,50 @@
     <form id="form1" runat="server">
         <div id="wrapper">
 
-           <div id="top">
-               <div id="logo">
-                   <img src="images/logo9.png" />
-               </div>
+            <div id="top">
+                <div id="logo">
+                    <img src="images/logo9.png" />
+                </div>
 
-               <div id="name">
-                   <p>FishLand</p>
-                   <ul>
-                       <li>home of well done fish!</li>
-                   </ul>
-               </div>
+                <div id="name">
+                    <p>FishLand</p>
+                    <ul>
+                        <li>home of well done fish!</li>
+                    </ul>
+                </div>
 
-               <div id="social-media">
-                   <p>Connect With Us</p>
-                   <ul>
-                       <li><a href="http://www.facebook.com"><img src="images/facebookIkon.png"></a></li>
-                       <li><a href="http://www.youtube.com"><img src="images/youtubeIcon.png"></a></li>
-                       <li><a href="http://www.twitter.com"><img src="images/twitterIcon.png"></a></li>
-                   </ul>
-                   <p>Contact Us Today: 011 235 8597 </p>
+                <div id="social-media">
+                    <p>Connect With Us</p>
+                    <ul>
+                        <li><a href="http://www.facebook.com">
+                            <img src="images/facebookIkon.png"></a></li>
+                        <li><a href="http://www.youtube.com">
+                            <img src="images/youtubeIcon.png"></a></li>
+                        <li><a href="http://www.twitter.com">
+                            <img src="images/twitterIcon.png"></a></li>
+                    </ul>
+                    <p>Contact Us Today: 011 235 8597 </p>
 
-                   <div id="two">
-                       <ul>
-                           <li><a href="register.aspx"> Register </a></li>
-                           <li><a href="login.aspx"> Login </a></li>
-                       </ul>
-                   </div>
-               </div>
-           </div>
-        
-           <div id="topnav">
-               <ul>
-                   <li><a href="Default.aspx">HOME</a></li>
-                   <li><a href="menu.aspx">MENU</a></li>
-                   <li><a href="order.aspx">ORDER ONLINE</a></li>
-                   <li><a href="About.aspx">ABOUT US</a></li>
-                   <li><a href="Contact.aspx">CONTACT US</a></li>
-               </ul>
-           </div>
+                    <div id="two">
+                        <ul>
+                            <li><a href="register.aspx">Register </a></li>
+                            <li><a href="login.aspx">Login </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-           <div style="width:1100px;margin-left:0px;">                
+            <div id="topnav">
+                <ul>
+                    <li><a href="Default.aspx">HOME</a></li>
+                    <li><a href="menu.aspx">MENU</a></li>
+                    <li><a href="order.aspx">ORDER ONLINE</a></li>
+                    <li><a href="About.aspx">ABOUT US</a></li>
+                    <li><a href="Contact.aspx">CONTACT US</a></li>
+                </ul>
+            </div>
+
+            <!-- <div style="width:1100px;margin-left:0px;">                
                <img alt="" class="banner" src="images/dish6.png" style="width:1100px;"/>
                   
                <script>
@@ -100,48 +105,58 @@
                    slideImages()
 
                </script>
-           </div>
+           </div> -->
+
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick"></asp:Timer>
+                    <asp:Image ID="Image1" Width="1100px" runat="server" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+
 
             <div id="subbanner">
-                <h3> So many different ways to leave you satisfied. Different makes, different tastes for different people. </h3>
+                <h3>So many different ways to leave you satisfied. Different makes, different tastes for different people. </h3>
             </div>
 
-           <div id="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            <div id="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <div id="rightside">
+                    <h2>Drinks</h2>
 
-            </asp:ContentPlaceHolder>
-           <div id="rightside">
-               <h2>Drinks</h2>
+                    <img src="images/beverages4.png" />
 
-               <img src="images/beverages4.png" />
-
-               <p> Here are some beverages to go with your meals. Soft drinks and juice are available for purchase as well, 
+                    <p>
+                        Here are some beverages to go with your meals. Soft drinks and juice are available for purchase as well, 
 				    along with your meals.
-               </p>
+                    </p>
 
-               <h2> Desserts </h2>
+                    <h2>Desserts </h2>
 
-               <img src="images/dessert4.png" />
+                    <img src="images/dessert4.png" />
 
-               <p>Our Chef makes some home-made desserts every now and then.
+                    <p>
+                        Our Chef makes some home-made desserts every now and then.
                    Puddings, triffles, ice-cream and etc.
-               </p>
+                    </p>
 
-               <h2> Today's Special </h2>
+                    <h2>Today's Special </h2>
 
-               <img src="images/meal2.png" />
+                    <img src="images/meal2.png" />
 
-               <p> Buy one Fish wrap, get one free for only R68.99. Drink included.</p>
+                    <p>Buy one Fish wrap, get one free for only R68.99. Drink included.</p>
 
-           </div>
+                </div>
 
 
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> FishLand Shop Website</p>
-            </footer>
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> FishLand Shop Website</p>
+                </footer>
+            </div>
+
         </div>
-           
-      </div> 
     </form>
 </body>
 </html>

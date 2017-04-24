@@ -69,12 +69,26 @@ namespace FishLand_FrontEnd
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack) {
+                SetImageUrl();
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+        }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            SetImageUrl();
+        }
+
+        private void SetImageUrl()
+        {
+            Random _rand = new Random();
+            int i = _rand.Next(1, 4);
+            Image1.ImageUrl = "~/images/" + i.ToString() + ".png";
         }
     }
 
