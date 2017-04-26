@@ -14,23 +14,6 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <script type="text/javascript" src="Scripts/js/jquery.js"></script>
-    <!-- JQuery Library -->
-    <script type="text/javascript" src="Scripts/js/banner.js"></script>
-    <!-- JQuery Plugin -->
-
-    <!--<script type="text/javascript">
-
-        var image1 = new Image()
-        image1.src = "images/dish6.png"
-
-        var image2 = new Image()
-        image2.src = "images/dish8.png"
-
-        var image3 = new Image()
-        image3.src = "images/fishFingers2.png"
-    </script>-->
-
     <link href="Content/master.css" rel="stylesheet" type="text/css" media="screen" />
 
 
@@ -82,31 +65,7 @@
                 </ul>
             </div>
 
-            <!-- <div style="width:1100px;margin-left:0px;">                
-               <img alt="" class="banner" src="images/dish6.png" style="width:1100px;"/>
-                  
-               <script>
-
-                   var step = 1
-
-                   function slideImages() {
-                       if (!document.images)
-                           return
-
-                       document.images.img.src = eval("image" + step + ".src")
-
-                       if (step < 3)
-                           step++
-                       else
-                           step = 1
-                       setTimeout("slideImages()", 5000)
-                   }
-
-                   slideImages()
-
-               </script>
-           </div> -->
-
+            
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
