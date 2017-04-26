@@ -19,10 +19,6 @@
         <br />
         <asp:TextBox ID="txtCellphone" runat="server"></asp:TextBox>
         <br /><br />
-        <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
-        <br />
-        <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-        <br /><br />
         <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label>
         <br />
         <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
@@ -34,6 +30,14 @@
         <asp:Label ID="lblCPassword" runat="server" Text="Confirm Password"></asp:Label>
         <br />
         <asp:TextBox ID="txtCPassword" runat="server"></asp:TextBox>
+        <br /><br />
+        <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
+        <br />
+        <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+        <br /><br />
+        <asp:Label ID="lblAddress" runat="server" Text="Address"></asp:Label>
+        <br />
+        <textarea id="TextAreaAddress" cols="40" rows="7"></textarea>              
         <br /><br />
         <asp:Button ID="btnRegister" runat="server" Text="Register" />
     </div>
