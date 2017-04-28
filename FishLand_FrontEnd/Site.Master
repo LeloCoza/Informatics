@@ -48,7 +48,7 @@
 
                     <div id="two">
                         <ul>
-                            <li><a runat="server" href="~/Account/Register">Register </a></li>
+                            <li><a href="register.aspx">Register </a></li>
                             <li><a href="~/Account/Login">Login </a></li>
                         </ul>
                     </div>

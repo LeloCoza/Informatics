@@ -37,8 +37,8 @@
         <br /><br />
         <asp:Label ID="lblAddress" runat="server" Text="Address"></asp:Label>
         <br />
-        <textarea id="TextAreaAddress" cols="40" rows="7"></textarea>              
+        <asp:TextBox ID="txtAddress" Columns="40" Rows="20" runat="server"></asp:TextBox>
         <br /><br />
-        <asp:Button ID="btnRegister" runat="server" Text="Register" />
+        <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
     </div>
 </asp:Content>

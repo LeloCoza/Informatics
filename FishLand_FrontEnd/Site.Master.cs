@@ -81,7 +81,7 @@ namespace FishLand_FrontEnd
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
 
-        //this functions sets the time interval for the slideshow
+        //this function sets the time interval for the slideshow
         //and uses SetImageUrl() 
         protected void Timer1_Tick(object sender, EventArgs e)
         {

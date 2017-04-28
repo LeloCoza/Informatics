@@ -77,3 +77,7 @@ C:\Users\User\Desktop\Repository\FishLand_FrontEnd\FishLand_FrontEnd\bin\Microso
 C:\Users\User\Desktop\Repository\FishLand_FrontEnd\FishLand_FrontEnd\obj\Debug\FishLand_FrontEnd.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\Repository\FishLand_FrontEnd\FishLand_FrontEnd\obj\Debug\FishLand_FrontEnd.dll
 C:\Users\User\Desktop\Repository\FishLand_FrontEnd\FishLand_FrontEnd\obj\Debug\FishLand_FrontEnd.pdb
+C:\Users\User\Desktop\Repository\FishLand_FrontEnd\FishLand_FrontEnd\bin\BusinessLayer.dll
+C:\Users\User\Desktop\Repository\FishLand_FrontEnd\FishLand_FrontEnd\bin\DatabaseLayer.dll
+C:\Users\User\Desktop\Repository\FishLand_FrontEnd\FishLand_FrontEnd\bin\BusinessLayer.pdb
+C:\Users\User\Desktop\Repository\FishLand_FrontEnd\FishLand_FrontEnd\bin\DatabaseLayer.pdb

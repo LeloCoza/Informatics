@@ -14,15 +14,24 @@ namespace DatabaseLayer
     {
         private string conn = ConfigurationManager.ConnectionStrings["FishLandDBEntities"].ToString();
 
-        public void InsertUpdateDeleteSQLString(string sqlstring) {
+        public void InsertUpdateDeleteSQLString(string sqlstring)
+        {
 
-            SqlConnection objsqlconn = new SqlConnection(conn);
-            objsqlconn.Open();
-            SqlCommand objcmd = new SqlCommand(sqlstring, objsqlconn);
-            objcmd.ExecuteNonQuery();
+            try
+            {
+                SqlConnection objsqlconn = new SqlConnection(conn);
+                objsqlconn.Open();
+                SqlCommand objcmd = new SqlCommand(sqlstring, objsqlconn);
+                objcmd.ExecuteNonQuery();
+            }
+            catch (ArgumentException e)
+            {
+               
+            }
         }
 
-        public object ExecuteSqlString(string sqlstring) {
+        public object ExecuteSqlString(string sqlstring)
+        {
 
             SqlConnection objsqlconn = new SqlConnection(conn);
             objsqlconn.Open();
@@ -37,7 +46,7 @@ namespace DatabaseLayer
         {
             DataSet ds = new DataSet();
             string sql = "INSERT into user (name, surname, dateOfBirth, cellphone, email, address) VALUES ('" + user_name + "','" + user_surname + "','" + user_DOB + "','" + user_cell + "','" + user_email + "','" + user_address + "')";
-            InsertUpdateDeleteSQLString(sql);        
+            InsertUpdateDeleteSQLString(sql);
         }
 
         public void UpdateUserDB(int user_id, string user_name, string user_surname, string user_DOB, string user_cell, string user_email, string user_address)
