@@ -69,6 +69,8 @@ namespace FishLand_FrontEnd
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //An if-statement to post back to the server the slide show
+            //images and not the whole page.
             if (!IsPostBack) {
                 SetImageUrl();
             }
@@ -79,11 +81,14 @@ namespace FishLand_FrontEnd
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
 
+        //this functions sets the time interval for the slideshow
+        //and uses SetImageUrl() 
         protected void Timer1_Tick(object sender, EventArgs e)
         {
             SetImageUrl();
         }
 
+        //this function gets url of images
         private void SetImageUrl()
         {
             Random _rand = new Random();
