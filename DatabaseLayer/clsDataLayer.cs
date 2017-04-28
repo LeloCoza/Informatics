@@ -32,5 +32,35 @@ namespace DatabaseLayer
             objAdp.Fill(ds);
             return ds;
         }
+
+        public void AddUser(string user_name, string user_surname, string user_DOB, string user_cell, string user_email, string user_address)
+        {
+            DataSet ds = new DataSet();
+            string sql = "INSERT into user (name, surname, dateOfBirth, cellphone, email, address) VALUES ('" + user_name + "','" + user_surname + "','" + user_DOB + "','" + user_cell + "','" + user_email + "','" + user_address + "')";
+            InsertUpdateDeleteSQLString(sql);        
+        }
+
+        public void UpdateUser(int user_id, string user_name, string user_surname, string user_DOB, string user_cell, string user_email, string user_address)
+        {
+            DataSet ds = new DataSet();
+            string sql = "Update user set name='" + user_name + "',surname='" + user_surname + "',dateOfBirth='" + user_DOB + "'cellphone='" + user_cell + "',email='" + user_email + "',address='" + user_address + "' Where userID='" + user_id + "' ";
+            InsertUpdateDeleteSQLString(sql);
+        }
+
+        public void DeleteUser(int user_id)
+        {
+            DataSet ds = new DataSet();
+            string sql = "Delete from User Where userID='" + user_id + "' ";
+            InsertUpdateDeleteSQLString(sql);
+        }
+
+        public object RetrieveUser()
+        {
+            DataSet ds = new DataSet();
+            string sql = "Select * from user order by userID";
+            ds = (DataSet)ExecuteSqlString(sql);
+            return ds;
+        }
+
     }
 }
