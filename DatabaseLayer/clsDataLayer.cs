@@ -16,17 +16,15 @@ namespace DatabaseLayer
 
         public void InsertUpdateDeleteSQLString(string sqlstring)
         {
+            try { 
 
-            try
-            {
                 SqlConnection objsqlconn = new SqlConnection(conn);
                 objsqlconn.Open();
                 SqlCommand objcmd = new SqlCommand(sqlstring, objsqlconn);
                 objcmd.ExecuteNonQuery();
-            }
-            catch (ArgumentException e)
+            } catch(ArgumentException e)
             {
-               
+                Console.WriteLine(e.Message);
             }
         }
 
