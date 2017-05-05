@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="FishLandDBModelStoreContainer" CdmEntityContainer="FishLandDBEntities">
+  <EntityContainerMapping StorageEntityContainer="FishLandDBModelStoreContainer" CdmEntityContainer="FishLandDBEntities1">
     <EntitySetMapping Name="categories">
       <EntityTypeMapping TypeName="FishLandDBModel.category">
         <MappingFragment StoreEntitySet="category">

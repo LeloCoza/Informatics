@@ -22,7 +22,19 @@ namespace FishLand_FrontEnd
             objLogic = new clsBusinessLayer();
 
             objLogic.AddUser(txtName.Text, txtSurname.Text, txtDOB.Text, txtCellphone.Text, txtEmail.Text, txtAddress.Text);
-            
+
+            clear();
+            Response.Redirect("register.aspx");
+        }
+
+        public void clear()
+        {
+            txtName.Text = "";
+            txtSurname.Text = "";
+            txtDOB.Text = "";
+            txtCellphone.Text = "";
+            txtEmail.Text = "";
+            txtAddress.Text = "";
         }
     }
 }

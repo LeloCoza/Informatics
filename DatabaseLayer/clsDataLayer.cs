@@ -12,7 +12,7 @@ namespace DatabaseLayer
 {
     public class clsDataLayer
     {
-        private string conn = ConfigurationManager.ConnectionStrings["FishLandDBEntities"].ToString();
+        private string conn = ConfigurationManager.ConnectionStrings["FishLandDBEntities1"].ToString();
 
         public void InsertUpdateDeleteSQLString(string sqlstring)
         {

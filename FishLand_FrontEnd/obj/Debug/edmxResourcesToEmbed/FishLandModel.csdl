@@ -178,7 +178,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="FishLandDBEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="FishLandDBEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="categories" EntityType="Self.category" />
     <EntitySet Name="credentials" EntityType="Self.credential" />
     <EntitySet Name="orders" EntityType="Self.order" />
