@@ -1,56 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="FishLandDBModelStoreContainer" CdmEntityContainer="FishLandDBEntities1">
-    <EntitySetMapping Name="categories">
-      <EntityTypeMapping TypeName="FishLandDBModel.category">
-        <MappingFragment StoreEntitySet="category">
-          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
-          <ScalarProperty Name="catName" ColumnName="catName" />
+  <EntityContainerMapping StorageEntityContainer="FishLandDBModelStoreContainer" CdmEntityContainer="FishLandDBEntities">
+    <EntitySetMapping Name="Actors">
+      <EntityTypeMapping TypeName="FishLandDBModel.Actor">
+        <MappingFragment StoreEntitySet="Actor">
+          <ScalarProperty Name="ActorID" ColumnName="ActorID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Cellphone" ColumnName="Cellphone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="credentials">
-      <EntityTypeMapping TypeName="FishLandDBModel.credential">
-        <MappingFragment StoreEntitySet="credentials">
-          <ScalarProperty Name="credentialsID" ColumnName="credentialsID" />
-          <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="userID" ColumnName="userID" />
-          <ScalarProperty Name="userTypeID" ColumnName="userTypeID" />
+    <EntitySetMapping Name="ActorIdentities">
+      <EntityTypeMapping TypeName="FishLandDBModel.ActorIdentity">
+        <MappingFragment StoreEntitySet="ActorIdentity">
+          <ScalarProperty Name="ActorIdentityID" ColumnName="ActorIdentityID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ActorID" ColumnName="ActorID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="orders">
-      <EntityTypeMapping TypeName="FishLandDBModel.order">
-        <MappingFragment StoreEntitySet="order">
-          <ScalarProperty Name="orderID" ColumnName="orderID" />
-          <ScalarProperty Name="status" ColumnName="status" />
-          <ScalarProperty Name="orderDate" ColumnName="orderDate" />
-          <ScalarProperty Name="NoOfItems" ColumnName="NoOfItems" />
-          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
-          <ScalarProperty Name="credentialsID" ColumnName="credentialsID" />
+    <EntitySetMapping Name="Authentications">
+      <EntityTypeMapping TypeName="FishLandDBModel.Authentication">
+        <MappingFragment StoreEntitySet="Authentication">
+          <ScalarProperty Name="AuthenticationID" ColumnName="AuthenticationID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ConfirmPass" ColumnName="ConfirmPass" />
+          <ScalarProperty Name="ActorID" ColumnName="ActorID" />
+          <ScalarProperty Name="ActorIdentityID" ColumnName="ActorIdentityID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="orderProducts">
-      <EntityTypeMapping TypeName="FishLandDBModel.orderProduct">
-        <MappingFragment StoreEntitySet="orderProducts">
-          <ScalarProperty Name="orderID" ColumnName="orderID" />
-          <ScalarProperty Name="productID" ColumnName="productID" />
-          <ScalarProperty Name="quantity" ColumnName="quantity" />
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="FishLandDBModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="products">
-      <EntityTypeMapping TypeName="FishLandDBModel.product">
-        <MappingFragment StoreEntitySet="product">
-          <ScalarProperty Name="productID" ColumnName="productID" />
-          <ScalarProperty Name="productNo" ColumnName="productNo" />
-          <ScalarProperty Name="prodName" ColumnName="prodName" />
-          <ScalarProperty Name="prodDescript" ColumnName="prodDescript" />
-          <ScalarProperty Name="prodPrice" ColumnName="prodPrice" />
-          <ScalarProperty Name="prodPic" ColumnName="prodPic" />
-          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+    <EntitySetMapping Name="Oders">
+      <EntityTypeMapping TypeName="FishLandDBModel.Oder">
+        <MappingFragment StoreEntitySet="Oder">
+          <ScalarProperty Name="OderID" ColumnName="OderID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="AuthenticationID" ColumnName="AuthenticationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OderProducts">
+      <EntityTypeMapping TypeName="FishLandDBModel.OderProduct">
+        <MappingFragment StoreEntitySet="OderProduct">
+          <ScalarProperty Name="OderID" ColumnName="OderID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="NumOfItems" ColumnName="NumOfItems" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="FishLandDBModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductDescript" ColumnName="ProductDescript" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductPicture" ColumnName="ProductPicture" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -62,29 +84,6 @@
           <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="users">
-      <EntityTypeMapping TypeName="FishLandDBModel.user">
-        <MappingFragment StoreEntitySet="user">
-          <ScalarProperty Name="userID" ColumnName="userID" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="surname" ColumnName="surname" />
-          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
-          <ScalarProperty Name="cellphone" ColumnName="cellphone" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="address" ColumnName="address" />
-          <ScalarProperty Name="userTypeID" ColumnName="userTypeID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="userTypes">
-      <EntityTypeMapping TypeName="FishLandDBModel.userType">
-        <MappingFragment StoreEntitySet="userType">
-          <ScalarProperty Name="userTypeID" ColumnName="userTypeID" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -11,24 +11,24 @@ namespace BusinessLayer
     {
         public clsDataLayer objDataLayer = new clsDataLayer();
 
-        public void AddUser(string user_name, string user_surname, string user_DOB, string user_cell, string user_email, string user_address)
+        public void AddActor(int actor_id, string actor_name, string actor_surname, string actor_DOB, string actor_cell, string actor_email, string actor_address)
         {
-            objDataLayer.AddUserDB(user_name, user_surname, user_DOB, user_cell, user_email, user_address);
+            objDataLayer.AddActorDB(actor_id, actor_name, actor_surname, actor_DOB, actor_cell, actor_email, actor_address);
         }
 
-        public void UpdateUser(int user_id, string user_name, string user_surname, string user_DOB, string user_cell, string user_email, string user_address)
+        public void UpdateActor(int actor_id, string actor_name, string actor_surname, string actor_DOB, string actor_cell, string actor_email, string actor_address)
         {
-            objDataLayer.UpdateUserDB(user_id, user_name, user_surname, user_DOB, user_cell, user_email, user_address); 
+            objDataLayer.UpdateActorDB(actor_id, actor_name, actor_surname, actor_DOB, actor_cell, actor_email, actor_address); 
         }
 
-        public void DeleteUser(int user_id)
+        public void DeleteActor(int actor_id)
         {
-            objDataLayer.DeleteUserDB(user_id);
+            objDataLayer.DeleteActorDB(actor_id);
         }
 
-        public object RetrieveUser()
+        public object RetrieveActor()
         {
-            return objDataLayer.RetrieveUserDB();
+            return objDataLayer.RetrieveActorDB();
         }
     }
 }

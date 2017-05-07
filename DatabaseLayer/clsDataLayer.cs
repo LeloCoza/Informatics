@@ -12,7 +12,7 @@ namespace DatabaseLayer
 {
     public class clsDataLayer
     {
-        private string conn = ConfigurationManager.ConnectionStrings["FishLandDBEntities1"].ToString();
+        private string conn = ConfigurationManager.ConnectionStrings["FishLandDBEntities"].ToString();
 
         public void InsertUpdateDeleteSQLString(string sqlstring)
         {
@@ -40,31 +40,31 @@ namespace DatabaseLayer
             return ds;
         }
 
-        public void AddUserDB(string user_name, string user_surname, string user_DOB, string user_cell, string user_email, string user_address)
+        public void AddActorDB(int actor_id, string actor_name, string actor_surname, string actor_DOB, string actor_cell, string actor_email, string actor_address)
         {
             DataSet ds = new DataSet();
-            string sql = "INSERT into user (name, surname, dateOfBirth, cellphone, email, address) VALUES ('" + user_name + "','" + user_surname + "','" + user_DOB + "','" + user_cell + "','" + user_email + "','" + user_address + "')";
+            string sql = "INSERT into Actor (Name, Surname, DateOfBirth, Cellphone, Email, Address) VALUES ('" + actor_name + "','" + actor_surname + "','" + actor_DOB + "','" + actor_cell + "','" + actor_email + "','" + actor_address + "')";
             InsertUpdateDeleteSQLString(sql);
         }
 
-        public void UpdateUserDB(int user_id, string user_name, string user_surname, string user_DOB, string user_cell, string user_email, string user_address)
+        public void UpdateActorDB(int actor_id, string actor_name, string actor_surname, string actor_DOB, string actor_cell, string actor_email, string actor_address)
         {
             DataSet ds = new DataSet();
-            string sql = "Update user set name='" + user_name + "',surname='" + user_surname + "',dateOfBirth='" + user_DOB + "'cellphone='" + user_cell + "',email='" + user_email + "',address='" + user_address + "' Where userID='" + user_id + "' ";
+            string sql = "Update Actor set Name='" + actor_name + "',Surname='" + actor_surname + "',DateOfBirth='" + actor_DOB + "'Cellphone='" + actor_cell + "',Email='" + actor_email + "',Address='" + actor_address + "' Where ActorID='" + actor_id + "' ";
             InsertUpdateDeleteSQLString(sql);
         }
 
-        public void DeleteUserDB(int user_id)
+        public void DeleteActorDB(int actor_id)
         {
             DataSet ds = new DataSet();
-            string sql = "Delete from User Where userID='" + user_id + "' ";
+            string sql = "Delete from Actor Where ActorID='" + actor_id + "' ";
             InsertUpdateDeleteSQLString(sql);
         }
 
-        public object RetrieveUserDB()
+        public object RetrieveActorDB()
         {
             DataSet ds = new DataSet();
-            string sql = "Select * from user order by userID";
+            string sql = "Select * from Actor order by ActorID";
             ds = (DataSet)ExecuteSqlString(sql);
             return ds;
         }
